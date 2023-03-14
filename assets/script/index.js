@@ -55,8 +55,14 @@ createBtn.addEventListener('click', function() {
 
     const newDiv = document.createElement('div');
     newDiv.classList.add(newShape.name);
-    
-    newDiv.style.backgroundColor = newShape.color;
+    newDiv.style.backgroundColor = checkColor(newShape.color);
     grid.append(newDiv);
 });
 
+function checkColor(color) {
+    if (color == 'blue') return '#09f';
+    if (color == 'green') return '#9f0';
+    if (color == 'orange') return '#f90';
+    if (color == 'pink') return '#f09';
+    if (color == 'purple') return '#90f';
+};

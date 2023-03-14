@@ -86,6 +86,10 @@ option {
     cursor: pointer;
 }
 
+.circle:active, .square:active {
+    border: 1px solid #000;
+}
+
 .shape-txt {
     margin-top: 20px;
     text-align: center;
