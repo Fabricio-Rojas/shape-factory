@@ -36,7 +36,7 @@ class Shape {
     };
 
     getInfo() {
-        return `${this.#name} ${this.#color}`
+        return `${this.#color} ${this.#name}`
     };
 };
 
@@ -56,6 +56,9 @@ createBtn.addEventListener('click', function() {
     const newDiv = document.createElement('div');
     newDiv.classList.add(newShape.name);
     newDiv.style.backgroundColor = checkColor(newShape.color);
+    newDiv.onclick = function() {
+        textDisplay.innerText = `Unit ${shapeList.indexOf(newShape) + 1}: ${newShape.getInfo()}`
+    }; 
     grid.append(newDiv);
 });
 
